@@ -36,6 +36,42 @@
     }
 </script>
 
+        <div>
+
+                <audio id="audio">
+                    <source src="MerryChristmas.mp3" type="audio/mpeg">
+                </audio>
+            
+                <button id="playPauseBTN" onclick="playPause()">Play ►</button>
+                 
+                 
+               
+        
+            </div>
+
+         <script>
+
+        var audio = document.getElementById('audio');
+var playPauseBTN = document.getElementById('playPauseBTN');
+var count = 0;
+
+function playPause(){
+	if(count == 0){
+		count = 1;
+		audio.play();
+		playPauseBTN.innerHTML = "Pause ⏸";
+	}else{
+		count = 0;
+		audio.pause();
+		playPauseBTN.innerHTML = "Play ►";
+	}
+
+}
+
+    </script>
+    
+    <script src="js/custom.js"></script>
+
   <br>
   <br>
 
